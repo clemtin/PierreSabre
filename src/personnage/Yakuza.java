@@ -1,10 +1,10 @@
 package personnage;
 
 public class Yakuza extends Humain {
-	public Yakuza(String nom, String boissonFav, int argentPosseder, String clan, int reputation) {
+	public Yakuza(String nom, String boissonFav, int argentPosseder, String clan) {
 		super(nom, "whisky", argentPosseder);
 		this.clan=clan;
-		this.reputation=reputation;
+		this.reputation=1;
 
 
 	}

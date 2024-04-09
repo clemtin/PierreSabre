@@ -22,7 +22,7 @@ public class HistoireTP4 {
 		Marco.boire();
 		
 		
-		Yakuza yakuLeNoir = new Yakuza("Yaku le Noir","whisky",45,"Warsong",4);
+		Yakuza yakuLeNoir = new Yakuza("Yaku le Noir","whisky",45,"Warsong");
 		Ronin Roro = new Ronin("roro",54,1);
 		Roro.provoquer(yakuLeNoir);
 		

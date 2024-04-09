@@ -4,7 +4,13 @@ public class Humain {
 	protected String nom;
 	private String boissonFav;
 	protected int argentPosseder;
-
+	private int memoire=30;
+	int compteur=0;
+	int nbConnaissance=0;
+	private Humain[] TabConnaissance = new Humain[memoire];
+			
+			
+			
 	public Humain(String nom, String boissonFav, int argentPosseder) {
 		this.nom=nom;
 		this.boissonFav=boissonFav;
@@ -60,6 +66,50 @@ public class Humain {
 			this.argentPosseder -=prix;
 		}
 	}
+	
+	
+	public void faireConnaissanceAvec(Humain autreHumain) {
+		direBonjour();
+		autreHumain.direBonjour();
+		memoriser(autreHumain);
+		
+		
+		
+	}
+	
+	public void memoriser(Humain autreHumain) {
+		if (compteur<30)
+		{
+		nbConnaissance=compteur;
+		TabConnaissance[compteur]=autreHumain;
+		compteur++;
+		}
+		
+		else
+		
+		{
+		int x=compteur%30;
+		TabConnaissance[x]=autreHumain;
+		compteur++;	
+		nbConnaissance=30;
+		}
+		
+
+	}
+	
+	
+	
+	public void listerConnaissance( ) {
+		String s ="Je connais beaucoup de monde dont :";
+		
+		
+		for (int i = 0; i < nbConnaissance ; i++ ) {
+			s+=" "+(TabConnaissance[i].getNom());
+		}
+		parler(s);
+	}
+	
+	
 
 }
 
